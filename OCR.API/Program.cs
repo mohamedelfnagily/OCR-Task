@@ -102,7 +102,7 @@ namespace OCR.API
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
-
+			app.UseCors(allowPolicy);
 			app.UseHttpsRedirection();
 
 			app.UseAuthentication();
