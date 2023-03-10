@@ -33,5 +33,12 @@ namespace OCR.API.Controllers
 			}
 			return Ok(AddedCarData);
 		}
+
+		[HttpGet("GetAllCarsData")]
+		public async Task<ActionResult<IEnumerable<CarDataReadDto>>> GetAllCarsData()
+		{
+			var CarsData = await _cardatamanager.GetAllCarDataAsync();
+			return Ok(CarsData);
+		}
 	}
 }

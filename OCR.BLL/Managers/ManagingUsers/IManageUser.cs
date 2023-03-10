@@ -9,6 +9,7 @@ namespace OCR.BLL.Managers.ManagingUsers
 {
 	public interface IManageUser
 	{
+		Task<bool> CheckUserExistance(string Id);
 		Task<UserReadDto> GetUserByIdAsync(string Id);
 		Task<IEnumerable<UserReadDto>> GetAllUsersAsync();
 		Task<UserReadDto> DeleteUser(string Id);

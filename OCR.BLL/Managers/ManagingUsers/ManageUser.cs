@@ -23,6 +23,13 @@ namespace OCR.BLL.Managers.ManagingUsers
 			_usermanager= usermanaer;
 		}
 
+		public async Task<bool> CheckUserExistance(string Id)
+		{
+			var UserExists = await _usermanager.FindByIdAsync(Id);
+			if (UserExists == null) { return false; }
+			return true;
+		}
+
 		public async Task<UserReadDto> DeleteUser(string Id)
 		{
 			var user = await _usermanager.FindByIdAsync(Id);

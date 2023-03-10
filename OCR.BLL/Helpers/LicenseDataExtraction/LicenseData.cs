@@ -27,7 +27,7 @@ namespace OCR.BLL.Helpers.LicenseDataExtraction
 			var myIgmg = ResizeImage(img, ImageProperSize.Width, ImageProperSize.Height);
 			var ocr = new IronTesseract();
 			var CarDataList = new List<string>();
-			CarDataReadDto EnteredCarData = null;
+			CarDataReadDto EnteredCarData = new CarDataReadDto();
 			using (var input = new OcrInput(myIgmg))
 			{
 				int counter = 0;

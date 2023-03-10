@@ -10,5 +10,6 @@ namespace OCR.BLL.Managers.ManagingCarsData
 	public interface ICarDataManager
 	{
 		Task<CarDataReadDto> AddCarData(CarDataAddDto model);
+		Task<IEnumerable<CarDataReadDto>> GetAllCarDataAsync();
 	}
 }
