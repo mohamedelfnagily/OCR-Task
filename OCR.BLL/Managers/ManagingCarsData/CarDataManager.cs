@@ -45,6 +45,10 @@ namespace OCR.BLL.Managers.ManagingCarsData
 				carData.CarLicenseImage = memoryStream.ToArray();
 				GeneratedDataFromImage = _licenseData.GetLicenseData(carData.CarLicenseImage);
 			}
+			if(GeneratedDataFromImage.ErrorMessage !=string.Empty)
+			{
+				return GeneratedDataFromImage;
+			}
 			carData.ChassisNumber = GeneratedDataFromImage.ChassisNumber;
 			carData.MotorNumber = GeneratedDataFromImage.MotorNumber;
 			carData.Id = Guid.NewGuid();

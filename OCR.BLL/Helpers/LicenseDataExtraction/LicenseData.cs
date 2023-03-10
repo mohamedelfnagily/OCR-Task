@@ -53,6 +53,10 @@ namespace OCR.BLL.Helpers.LicenseDataExtraction
 					}
 				}
 			}
+			if (EnteredCarData.MotorNumber == string.Empty || EnteredCarData.ChassisNumber == string.Empty)
+			{
+				return new CarDataReadDto() { ErrorMessage = "Image resolution is not good enough, please upload a new image" };
+			}
 			return EnteredCarData;
 		}
 
