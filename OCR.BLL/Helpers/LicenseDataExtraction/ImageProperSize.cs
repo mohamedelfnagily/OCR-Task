@@ -10,5 +10,7 @@ namespace OCR.BLL.Helpers.LicenseDataExtraction
 	{
 		public static int Width { get; } = 475;
 		public static int Height { get; } = 353;
+		public static int SubstitutableWidth { get; set; } = 800;
+		public static int SubstitutableHeight { get; set; } = 1000;
 	}
 }

@@ -55,6 +55,37 @@ namespace OCR.BLL.Helpers.LicenseDataExtraction
 			}
 			if (EnteredCarData.MotorNumber == string.Empty || EnteredCarData.ChassisNumber == string.Empty)
 			{
+				var NewIgmg = ResizeImage(img, ImageProperSize.SubstitutableWidth, ImageProperSize.SubstitutableHeight);
+				ocr.Language = OcrLanguage.Arabic;
+				using (var input = new OcrInput(NewIgmg))
+				{
+					int counter = 0;
+					input.Contrast();
+					input.EnhanceResolution();
+					var result = ocr.Read(input).Text;
+					var str = result.Replace("\n", ",").Replace("\r", "").Replace(" ", ",");
+					var str2 = Regex.Replace(str, @"[^0-9,]+", "");
+					var myList = str2.Split(',').ToList();
+					if (myList.Count >= 2)
+					{
+						foreach (var item in myList)
+						{
+							if (item != string.Empty && item.Length >= 4)
+							{
+								CarDataList.Add(item);
+								counter++;
+							}
+							if (counter == 2)
+							{
+								EnteredCarData = new CarDataReadDto { ChassisNumber = CarDataList[0], MotorNumber = CarDataList[1] };
+								break;
+							}
+						}
+					}
+				}
+			}
+			if (EnteredCarData.MotorNumber == string.Empty || EnteredCarData.ChassisNumber == string.Empty)
+			{
 				return new CarDataReadDto() { ErrorMessage = "Image resolution is not good enough, please upload a new image" };
 			}
 			return EnteredCarData;
