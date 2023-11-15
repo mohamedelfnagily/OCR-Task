@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OCR.DAL\OCR.DAL.csproj" />
+    <ProjectReference Include="..\OCR.ProcessingImages\OCR.ProcessingImages.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,8 +17,10 @@
     <PackageReference Include="IronOcr.Languages.Arabic" Version="2020.11.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.0" />
+    <PackageReference Include="RestSharp" Version="109.0.1" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,7 @@ using OCR.BLL.Helpers.JWTDataExtractor;
 using OCR.BLL.Helpers.LicenseDataExtraction;
 using OCR.BLL.Managers.ManagingAuthentication;
 using OCR.BLL.Managers.ManagingCarsData;
+using OCR.BLL.Managers.ManagingImageProcessing;
 using OCR.BLL.Managers.ManagingUsers;
 using OCR.DAL.Data.Context;
 using OCR.DAL.Data.Models;
@@ -62,6 +63,7 @@ namespace OCR.API
 			builder.Services.AddScoped<ICarDataManager,CarDataManager>();
 			builder.Services.AddScoped<IManageUser,ManageUser>();
 			builder.Services.AddScoped<ILicenseData, LicenseData>();
+			builder.Services.AddScoped<IImageProcessingManager,ImageProcessingManager>();
 			#endregion
 
 			#region Automapper configuration

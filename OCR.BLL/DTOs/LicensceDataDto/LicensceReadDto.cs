@@ -1,23 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
-using OCR.BLL.CustomValidations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OCR.BLL.DTOs
+namespace OCR.BLL.DTOs.LicensceDataDto
 {
-	public class CarDataReadDto
+	public class LicensceReadDto
 	{
-		public Guid Id { get; set; }
-		public string ChassisNumber { get; set; } = "";
-		public string MotorNumber { get; set; } = "";
 		public string DriverFullName { get; set; } = "";
 		public string LicensceEndDate { get; set; } = "";
 		public string LicensceStartDate { get; set; } = "";
-		public byte[]? CarLicenseImage { get; set; }
+		public string ChassisNumber { get; set; } = "";
+		public string MotorNumber { get; set; } = "";
 		public string ErrorMessage { get; set; } = "";
-
 	}
 }

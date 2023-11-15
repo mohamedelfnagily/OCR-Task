@@ -13,6 +13,9 @@ namespace OCR.DAL.Data.Models
 		public Guid Id { get; set; }
 		public string ChassisNumber { get; set; } = "";
 		public string MotorNumber { get; set; } = "";
+		public string DriverFullName { get; set; } = "";
+		public string LicensceEndDate { get; set; } = "";
+		public string LicensceStartDate { get; set; } = "";
 		public byte[]? CarLicenseImage { get; set; }
 		[ForeignKey("Id")]
 		public string UserId { get; set; }

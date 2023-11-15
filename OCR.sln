@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCR.API", "OCR.API\OCR.API.csproj", "{80F5AB47-DA92-4A54-9ED9-FFDAB87BDA0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCR.API", "OCR.API\OCR.API.csproj", "{80F5AB47-DA92-4A54-9ED9-FFDAB87BDA0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCR.DAL", "OCR.DAL\OCR.DAL.csproj", "{79E42F6B-65FE-4A29-9A56-E1D17B1FF83B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCR.DAL", "OCR.DAL\OCR.DAL.csproj", "{79E42F6B-65FE-4A29-9A56-E1D17B1FF83B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCR.BLL", "OCR.BLL\OCR.BLL.csproj", "{4AE7B7DF-65EF-4F75-94C4-96EA99F036DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCR.BLL", "OCR.BLL\OCR.BLL.csproj", "{4AE7B7DF-65EF-4F75-94C4-96EA99F036DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCR.ProcessingImages", "OCR.ProcessingImages\OCR.ProcessingImages.csproj", "{CFF958BC-C0B8-47CB-AAB3-7A3862E91FF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4AE7B7DF-65EF-4F75-94C4-96EA99F036DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AE7B7DF-65EF-4F75-94C4-96EA99F036DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AE7B7DF-65EF-4F75-94C4-96EA99F036DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF958BC-C0B8-47CB-AAB3-7A3862E91FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF958BC-C0B8-47CB-AAB3-7A3862E91FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF958BC-C0B8-47CB-AAB3-7A3862E91FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF958BC-C0B8-47CB-AAB3-7A3862E91FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
